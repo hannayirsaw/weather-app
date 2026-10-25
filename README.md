@@ -2,6 +2,9 @@
 
 A weather application built with HTML, CSS, and JavaScript as part of my web development learning journey with freeCodeCamp.
 
+     Live Demo
+
+View Weather App
       Features
 
 Check weather information for selected cities.
