@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weatherly | Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="weather-app">
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-icon">☀</span>
+        <span>weatherly</span>
+      </div>
+      <p class="tagline">Your world, at a glance.</p>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">WEATHER DASHBOARD</p>
+      <h1>Feel the <span>forecast.</span></h1>
+      <p class="subtitle">Discover the weather in your favorite cities.</p>
+
+      <div class="city-search">
+        <label for="city-select">Choose a city</label>
+        <div class="search-controls">
+          <select id="city-select">
+            <option value=""></option>
+            <option value="new york">New York</option>
+            <option value="los angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="paris">Paris</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="london">London</option>
+          </select>
+          <button id="get-weather-btn" type="button">
+            Get weather <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="weather-panel" aria-live="polite">
+      <div class="weather-heading">
+        <div>
+          <p class="eyebrow">CURRENT CONDITIONS</p>
+          <h2 id="location">Your city awaits</h2>
+        </div>
+        <div class="weather-symbol">
+          <img id="weather-icon" src="" alt="Weather icon" hidden>
+          <span id="weather-placeholder" aria-hidden="true">☁</span>
+        </div>
+      </div>
+
+      <div class="temperature-area">
+        <p class="weather-description" id="weather-main">—</p>
+        <p class="temperature" id="main-temperature">--<span>°C</span></p>
+        <p class="feels-label">Feels like <span id="feels-like">N/A</span></p>
+      </div>
+
+      <div class="details-grid">
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">💧</span>
+          <p class="detail-label">Humidity</p>
+          <p class="detail-value"><span id="humidity">N/A</span><span class="unit">%</span></p>
+        </article>
+
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">🌬️</span>
+          <p class="detail-label">Wind speed</p>
+          <p class="detail-value"><span id="wind">N/A</span><span class="unit"> m/s</span></p>
+        </article>
+
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">💨</span>
+          <p class="detail-label">Wind gust</p>
+          <p class="detail-value"><span id="wind-gust">N/A</span><span class="unit"> m/s</span></p>
+        </article>
+      </div>
+
+      <p class="temperature-note">Temperatures in Celsius · Wind in m/s</p>
+    </section>
+
+    <footer>
+      <p>Made for curious minds <span>✦</span> Powered by weather data</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
